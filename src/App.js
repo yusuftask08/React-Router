@@ -1,15 +1,18 @@
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-
+import Users from "./components/Users";
+import User from "./components/User";
 function App() {
   return (
-    <div>
+    <div >
       <header>
         <h1>Welcome to React Router!</h1>
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/user/:id" element={<User />} />
       </Routes>
     </div>
   );
@@ -24,6 +27,7 @@ function Home() {
       </main>
       <nav>
         <Link to="/about">About</Link>
+        <Link to="/users">User</Link>
       </nav>
     </>
   );
@@ -41,6 +45,7 @@ function About() {
       </main>
       <nav>
         <Link to="/">Home</Link>
+        <Link to="/users">User</Link>
       </nav>
     </>
   );
