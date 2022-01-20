@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Users from "./components/Users";
 import User from "./components/User";
 function App() {
@@ -26,8 +26,8 @@ function Home() {
         <p>You can do this, I believe in you.</p>
       </main>
       <nav>
-        <Link to="/about">About</Link>
-        <Link to="/users">User</Link>
+        <NavLink activeStyle={{ backgroundColor: 'black', color: '#fff' }} to="/about">About</NavLink>
+        <NavLink activeStyle={{ backgroundColor: 'black', color: '#fff' }} to="/users">User</NavLink>
       </nav>
     </>
   );
@@ -44,8 +44,8 @@ function About() {
         </p>
       </main>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/users">User</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/users">User</NavLink>
       </nav>
     </>
   );
