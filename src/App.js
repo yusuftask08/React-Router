@@ -2,6 +2,7 @@ import * as React from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import Users from "./components/Users";
 import User from "./components/User";
+import NotFoundPage from "./components/NotFoundPage";
 function App() {
   return (
     <div >
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
         <Route path="/user/:id" element={<User />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
